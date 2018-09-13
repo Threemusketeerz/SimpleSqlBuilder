@@ -42,8 +42,14 @@ public class QueryBuilder implements IQueryBuilder
 		query.append(from);
 		return this;
 	}
+	
+	public QueryBuilder and(String value)
+	{
+		query.append(value);
+		return this;
+	}
 
-	public Query build()
+	public Query end()
 	{
 		return query;
 	}

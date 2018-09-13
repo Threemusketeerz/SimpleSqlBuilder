@@ -16,11 +16,12 @@ public class App
 {
     public static void main( String[] args )
     {
-    	String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=webshop;password=1234Evil;user=sa";
+    	String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=webshop;password=123456Sql;user=sa";
     	Query query = new QueryBuilder()
     			.selectAll()
     			.from("product")
-    			.build();
+    			.where("product.id=1")
+    			.end();
     	
     	try
     	{
